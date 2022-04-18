@@ -1,0 +1,23 @@
+header {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--white);
+  box-shadow: 0px 0px 12px var(--standard-shadow);
+}
+header .header-content {
+  width: 100%;
+  padding: 20px 30px;
+}
+header .app-logo {
+  width: 135px;  
+}
+.header-spacer {
+  height: 75px;
+}
