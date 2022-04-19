@@ -30,10 +30,11 @@ body {
   --success: #5C946E;
   --warning: #F8C630;
 
+  --dark-text: #424242;
+
   --soft-shadow: rgba(0, 0, 0, 0.07);
   --standard-shadow: rgba(0, 0, 0, 0.25);
   --strong-shadow: rgba(0, 0, 0, 0.5);
-
 }
 
 code {

@@ -59,7 +59,7 @@ const Explore = () => {
     return (
       <div>
         <div className="search-loaded-section section-spacing pb-0">
-          <Form.Label htmlFor="address-2">Search again</Form.Label>
+          <Form.Label htmlFor="address-2" className="dark-text">Search again</Form.Label>
           <Form.Control
             type="text"
             id="address-2"
@@ -67,7 +67,7 @@ const Explore = () => {
             className="search-input"
             onChange={(e) => { setSearchAddress(e.target.value) }}
           />
-          <small className="d-block mt-2">
+          <small className="d-block mt-2 dark-text">
             Remember to add the commune, region and city names.
           </small>
           {loading 

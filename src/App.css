@@ -7,9 +7,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Global classes */
 .section-spacing {
   width: 100%;
   padding: 30px;
+}
+
+.dark-text {
+  color: var(--dark-text);
+}
+
+@media screen and (max-width: 576px) {
+  .section-spacing {
+    padding: 30px 20px;
+  }
 }
 
 /* Custom Bootstrap classes */
@@ -28,10 +40,4 @@ body {
 }
 .btn-custom-secondary:hover {
   background-color: var(--neutral-white) !important;
-}
-
-@media screen and (max-width: 576px) {
-  .section-spacing {
-    padding: 30px 20px;
-  }
 }

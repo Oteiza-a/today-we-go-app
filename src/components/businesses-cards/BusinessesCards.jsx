@@ -12,10 +12,10 @@ const BusinessesCards = ({ title, businesses }) => {
         <Card className="business-card">
           <Card.Img variant="top" src={imageUrl} />
           <Card.Body>
-            <Card.Title>{name}</Card.Title>
+            <Card.Title className="dark-text">{name}</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">{categories[0]?.title}</Card.Subtitle>
             {distance 
-              ? <Card.Text> {`${Math.trunc(distance)}m away`}</Card.Text> 
+              ? <Card.Text className="dark-text"> {`${Math.trunc(distance)}m away`}</Card.Text> 
               : ""
             }
             <div className="w-100 d-flex justify-content-end">
@@ -30,7 +30,7 @@ const BusinessesCards = ({ title, businesses }) => {
 
   return (
     <div className="section-spacing">
-      <h3 className="mb-4">{title}</h3>
+      <h3 className="dark-text mb-4">{title}</h3>
       <div className="masonry-container">
         {renderBusinesses()}
       </div>
