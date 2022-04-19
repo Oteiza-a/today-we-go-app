@@ -7,8 +7,8 @@ axios.interceptors.request.use(function (config) {
   return config;
 });
 
-const proxyUrl = ""
-// const proxyUrl = "https://damp-plains-18321.herokuapp.com/"
+// const proxyUrl = ""
+const proxyUrl = "https://damp-plains-18321.herokuapp.com/"
 const apiUrl = `${proxyUrl}https://api.yelp.com`
 
 export const getBusinesses = async (params) => {
