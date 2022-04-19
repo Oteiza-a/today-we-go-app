@@ -15,7 +15,7 @@ const BusinessesCards = ({ title, businesses }) => {
             <Card.Title className="dark-text">{name}</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">{categories[0]?.title}</Card.Subtitle>
             {distance 
-              ? <Card.Text className="dark-text"> {`${Math.trunc(distance)}m away`}</Card.Text> 
+              ? <Card.Text className="dark-text"> {`${Math.trunc(distance)}mts away`}</Card.Text> 
               : ""
             }
             <div className="w-100 d-flex justify-content-end">
