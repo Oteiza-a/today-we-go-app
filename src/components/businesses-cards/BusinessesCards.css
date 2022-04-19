@@ -1,0 +1,42 @@
+.card-col {
+  height: fit-content;
+}
+.business-card {
+  box-shadow: 0px 0px 10px var(--soft-shadow);
+}
+.masonry-container {
+  column-count: 4;
+  column-gap: 20px;
+}
+.masonry-item {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 20px;
+  break-inside: avoid;
+}
+@media screen and (max-width: 1400px) {
+  .masonry-container {
+    column-count: 5;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .masonry-container {
+    column-count: 4;
+  }
+}
+@media screen and (max-width: 992px) {
+  .masonry-container {
+    column-count: 3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .masonry-container {
+    column-count: 2;
+  }
+}
+@media screen and (max-width: 576px) {
+  .masonry-container {
+    column-count: 1;
+  }
+}

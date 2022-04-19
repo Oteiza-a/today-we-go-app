@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import BannerSlider from '../../components/banner-slider/BannerSlider';
 import BusinessesCards from '../../components/businesses-cards/BusinessesCards';
+import Loading from '../../components/loading/Loading';
+import Footer from '../../components/footer/Footer';
 
 // Fixed Data
 import { BANNERS } from '../../fixedData/banners'
@@ -14,7 +16,6 @@ import { getLocalstorageObject } from '../../helpers/localstorage.jsx'
 
 // Clients
 import { getBusinesses } from '../../clients/businesses';
-import { Spinner } from 'react-bootstrap';
 
 const Home = () => {
   const [coors, setCoors] = useState(null)
@@ -52,7 +53,6 @@ const Home = () => {
   const fetchBusinesses = async () => {
     if (!coors) return
     const businessesRes = await getBusinesses(coors)
-    console.log(businesses)
     if (businessesRes?.businesses) setBusinesses(businessesRes.businesses)
   }
 
@@ -63,14 +63,14 @@ const Home = () => {
         <BannerSlider banners={BANNERS}/>
 
         {businesses?.length 
-          ? <BusinessesCards businesses={businesses}/>
-          : <Spinner animation="grow" />
+          ? <BusinessesCards 
+              title="Places that may interest you" 
+              businesses={businesses}
+            />
+          : <Loading />
         }
-        <div>
-          <div>
-          </div>
-        </div>
       </div>
+      <Footer />
     </div>
   );
 };

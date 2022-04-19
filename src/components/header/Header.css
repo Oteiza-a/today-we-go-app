@@ -1,5 +1,5 @@
 header {
-  z-index: 2;
+  z-index: 5;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,10 +14,28 @@ header {
 header .header-content {
   width: 100%;
   padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo-container {
+  height: fit-content;
 }
 header .app-logo {
-  width: 135px;  
+  width: 135px;
+  cursor: pointer;
 }
 .header-spacer {
   height: 75px;
+}
+.search-btn::after {
+  content: "Search where to go today!";
+}
+@media screen and (max-width: 500px) {
+  header .app-logo {
+    width: 100px;
+  }
+  .search-btn::after {
+    content: "Search places!";
+  }
 }

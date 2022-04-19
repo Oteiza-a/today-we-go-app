@@ -1,26 +1,5 @@
 body {
-  /* App Color Palette */
   background-color: var(--white);
-  
-  --primary: #FF462B;
-  --secondary: #FFF2F1;
-  --tertiary: #263338;
-
-  --white: #FFFFFF;
-  --neutral-white: #F5F5F5;
-  --darker-white: #EBEBEB;
-
-  --neutral-gray: #777777;
-
-  --brighter-black: #4C4C47;
-  --neutral-black: #332626;
-  --black: #000000;
-
-  --success: #5C946E;
-  --warning: #F8C630;
-
-  --standard-shadow: rgba(0, 0, 0, 0.25);
-  --strong-shadow: rgba(0, 0, 0, 0.5);
 
   margin: 0;
   font-family: "Rubik", "Roboto", "Helvetica", sans-serif;
@@ -30,5 +9,29 @@ body {
 }
 .section-spacing {
   width: 100%;
-  padding: 20px 30px;
+  padding: 30px;
+}
+
+/* Custom Bootstrap classes */
+.btn-custom-primary {
+  background-color: var(--primary) !important;
+  color: var(--white) !important;
+}
+.btn-custom-primary:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+.btn-custom-secondary {
+  background-color: var(--white) !important;
+  border: 1px solid var(--primary) !important;
+  color: var(--primary) !important;
+}
+.btn-custom-secondary:hover {
+  background-color: var(--neutral-white) !important;
+}
+
+@media screen and (max-width: 576px) {
+  .section-spacing {
+    padding: 30px 20px;
+  }
 }
